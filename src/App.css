@@ -1,0 +1,191 @@
+main {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  height: 100vh;
+  align-items: center;
+}
+/* ===== Card ===== */
+.card-area {
+  position: relative;
+  height: 100%;
+  background: linear-gradient(
+      169.47deg,
+      rgba(4, 31, 27, 0.98) 14.76%,
+      #380c4a 25.62%,
+      #3b0e46 29.25%,
+      #3d0f42 33.37%,
+      #441436 40.15%,
+      #33254e 46.18%,
+      #2b2d59 52.47%,
+      #292654 57.59%,
+      #271f4f 62.33%,
+      #240d37 74.06%,
+      #22052d 88.22%,
+      #22052d 125.39%,
+      #22052d 154.65%,
+      #22052d 154.67%
+    ),
+    radial-gradient(
+        26.86% 9.25% at 52.64% 24.47%,
+        rgba(78, 26, 69, 0.2) 0%,
+        rgba(69, 20, 43, 0.2) 14.29%,
+        rgba(69, 20, 43, 0.2) 28.57%,
+        rgba(61, 14, 18, 0.2) 42.86%,
+        rgba(61, 13, 15, 0.2) 57.14%,
+        rgba(61, 13, 15, 0.2) 71.43%,
+        rgba(61, 13, 15, 0.2) 85.71%,
+        rgba(60, 13, 13, 0.2) 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+}
+
+.card {
+  width: 400px;
+  height: 250px;
+  border-radius: 10px;
+}
+.card-front {
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+
+  background: url("./images/bg-card-front.png") no-repeat center/cover;
+  justify-content: space-between;
+  position: absolute;
+  top: 10%;
+  right: -5rem;
+}
+.circle {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: white;
+}
+.circle::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 1px solid white;
+  transform: translate(3.5rem, 50%);
+  z-index: 2;
+}
+.card-number {
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+  line-height: 1.2;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+.card-info {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 1rem;
+}
+
+.card-info p {
+  color: white;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+.card-back {
+  background: linear-gradient(rgba(245, 245, 245, 1), rgba(217, 217, 217, 1));
+  padding-top: 2rem;
+  position: absolute;
+  top: 50%;
+  right: -10rem;
+}
+
+.black-strip {
+  width: 100%;
+  height: 50px;
+  padding-top: 3rem;
+  background-color: #333;
+}
+.card-cvc p {
+  background-color: rgba(173, 182, 191, 1);
+  color: white;
+  font-size: 0.85rem;
+  text-align: right;
+  padding: 0.5rem 0.75rem;
+  margin: 2rem 3rem auto;
+  border-radius: 6px;
+  letter-spacing: 2px;
+}
+
+.form-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: 25rem;
+}
+label {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #444;
+  margin-bottom: 0.35rem;
+}
+input {
+  padding: 0.75rem 0.75rem;
+
+  border-radius: 7px;
+  border: 1px solid #a4a4a4;
+}
+input::placeholder {
+  color: #a4a4a4;
+  font-size: 1rem;
+}
+
+#name,
+#number {
+  display: block;
+  width: 100%;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+#mm {
+  margin-right: 10px;
+  width: 47%;
+}
+#yy {
+  width: 47%;
+}
+input[name="cvc"] {
+  width: 100%;
+}
+
+.btn {
+  background-color: #220930;
+  color: white;
+  margin-top: 1rem;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  padding: 0.75rem 0;
+  border-radius: 7px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #491467;
+}
+
+span {
+  color: red;
+  font-size: 0.75rem;
+  margin-bottom: 1rem;
+}
